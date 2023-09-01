@@ -1,2 +1,2 @@
-go1_gazebo:robot/go1_description:unitree_legged_msgs
+go1_gazebo:robot/go1_description:unitree_legged_control:unitree_legged_msgs
 -DCATKIN_DEVEL_PREFIX=/home/li/ljyws/quadruped-sim/devel -DCMAKE_INSTALL_PREFIX=/home/li/ljyws/quadruped-sim/install -G Unix Makefiles

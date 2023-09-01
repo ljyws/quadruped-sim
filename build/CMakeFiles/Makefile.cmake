@@ -17,6 +17,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "go1_gazebo/catkin_generated/package.cmake"
   "robot/go1_description/catkin_generated/ordered_paths.cmake"
   "robot/go1_description/catkin_generated/package.cmake"
+  "unitree_legged_control/catkin_generated/ordered_paths.cmake"
+  "unitree_legged_control/catkin_generated/package.cmake"
   "unitree_legged_msgs/catkin_generated/ordered_paths.cmake"
   "unitree_legged_msgs/catkin_generated/package.cmake"
   "unitree_legged_msgs/catkin_generated/unitree_legged_msgs-msg-extras.cmake.develspace.in"
@@ -31,6 +33,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/li/ljyws/quadruped-sim/src/go1_gazebo/package.xml"
   "/home/li/ljyws/quadruped-sim/src/robot/go1_description/CMakeLists.txt"
   "/home/li/ljyws/quadruped-sim/src/robot/go1_description/package.xml"
+  "/home/li/ljyws/quadruped-sim/src/unitree_legged_control/CMakeLists.txt"
+  "/home/li/ljyws/quadruped-sim/src/unitree_legged_control/package.xml"
   "/home/li/ljyws/quadruped-sim/src/unitree_legged_msgs/CMakeLists.txt"
   "/home/li/ljyws/quadruped-sim/src/unitree_legged_msgs/package.xml"
   "/opt/ros/melodic/share/actionlib/cmake/actionlib-msg-extras.cmake"
@@ -364,6 +368,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "robot/go1_description/CMakeFiles/CMakeDirectoryInformation.cmake"
   "unitree_legged_msgs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "unitree_legged_control/CMakeFiles/CMakeDirectoryInformation.cmake"
   "go1_gazebo/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -446,6 +451,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_BmsState.dir/DependInfo.cmake"
   "unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_gencpp.dir/DependInfo.cmake"
   "unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_eus.dir/DependInfo.cmake"
+  "unitree_legged_control/CMakeFiles/unitree_legged_control.dir/DependInfo.cmake"
   "go1_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/DependInfo.cmake"
   "go1_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "go1_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/DependInfo.cmake"

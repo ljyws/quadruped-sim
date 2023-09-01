@@ -1169,6 +1169,19 @@ unitree_legged_msgs_generate_messages_eus/fast:
 .PHONY : unitree_legged_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named unitree_legged_control
+
+# Build rule for target.
+unitree_legged_control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitree_legged_control
+.PHONY : unitree_legged_control
+
+# fast build rule for target.
+unitree_legged_control/fast:
+	$(MAKE) -f unitree_legged_control/CMakeFiles/unitree_legged_control.dir/build.make unitree_legged_control/CMakeFiles/unitree_legged_control.dir/build
+.PHONY : unitree_legged_control/fast
+
+#=============================================================================
 # Target rules for targets named unitreeFootContactPlugin
 
 # Build rule for target.
@@ -1635,6 +1648,7 @@ help:
 	@echo "... _unitree_legged_msgs_generate_messages_check_deps_BmsState"
 	@echo "... unitree_legged_msgs_gencpp"
 	@echo "... unitree_legged_msgs_generate_messages_eus"
+	@echo "... unitree_legged_control"
 	@echo "... unitreeFootContactPlugin"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_lisp"

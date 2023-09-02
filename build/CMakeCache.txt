@@ -320,6 +320,9 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/local/share/eigen3/cmake
+
 //Path to a file.
 FreeImage_INCLUDE_DIRS:PATH=/usr/include
 
@@ -605,6 +608,9 @@ OGRE_Volume_LIBRARY_FWK:STRING=NOTFOUND
 //x
 OGRE_Volume_LIBRARY_REL:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreVolume.so
 
+//The directory containing a CMake configuration file for OsqpEigen.
+OsqpEigen_DIR:PATH=/usr/local/lib/cmake/OsqpEigen
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -740,6 +746,9 @@ dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
+//Dependencies for the target
+gazebo_go1_lib_LIB_DEPENDS:STATIC=general;a1_lib;
+
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/melodic/share/gazebo_msgs/cmake
 
@@ -786,6 +795,12 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
+go1_app_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/go1_app
+
+//Value Computed by CMake
+go1_app_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_app
+
+//Value Computed by CMake
 go1_description_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/robot/go1_description
 
 //Value Computed by CMake
@@ -796,6 +811,9 @@ go1_gazebo_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/go1_gazebo
 
 //Value Computed by CMake
 go1_gazebo_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_gazebo
+
+//Dependencies for target
+go1_lib_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/gtest
@@ -875,6 +893,9 @@ message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
+
+//The directory containing a CMake configuration file for osqp.
+osqp_DIR:PATH=/usr/local/lib/cmake/osqp
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
@@ -1308,7 +1329,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1169,6 +1169,32 @@ unitree_legged_msgs_generate_messages_eus/fast:
 .PHONY : unitree_legged_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named go1_ctrl
+
+# Build rule for target.
+go1_ctrl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go1_ctrl
+.PHONY : go1_ctrl
+
+# fast build rule for target.
+go1_ctrl/fast:
+	$(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/build
+.PHONY : go1_ctrl/fast
+
+#=============================================================================
+# Target rules for targets named go1_lib
+
+# Build rule for target.
+go1_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go1_lib
+.PHONY : go1_lib
+
+# fast build rule for target.
+go1_lib/fast:
+	$(MAKE) -f go1_app/CMakeFiles/go1_lib.dir/build.make go1_app/CMakeFiles/go1_lib.dir/build
+.PHONY : go1_lib/fast
+
+#=============================================================================
 # Target rules for targets named unitree_legged_control
 
 # Build rule for target.
@@ -1648,6 +1674,8 @@ help:
 	@echo "... _unitree_legged_msgs_generate_messages_check_deps_BmsState"
 	@echo "... unitree_legged_msgs_gencpp"
 	@echo "... unitree_legged_msgs_generate_messages_eus"
+	@echo "... go1_ctrl"
+	@echo "... go1_lib"
 	@echo "... unitree_legged_control"
 	@echo "... unitreeFootContactPlugin"
 	@echo "... trajectory_msgs_generate_messages_nodejs"

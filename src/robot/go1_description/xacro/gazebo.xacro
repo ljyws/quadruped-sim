@@ -252,8 +252,8 @@
     </gazebo>
 
     <gazebo reference="trunk">
-        <mu1>0.2</mu1>
-        <mu2>0.2</mu2>
+        <mu1>100</mu1>
+        <mu2>100</mu2>
         <kp  value="1000000.0"/>
         <kd  value="1.0"/>
     </gazebo>

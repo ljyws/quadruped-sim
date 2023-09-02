@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/li/ljyws/quadruped-sim/build/gtest/cmake_install.cmake")
   include("/home/li/ljyws/quadruped-sim/build/robot/go1_description/cmake_install.cmake")
   include("/home/li/ljyws/quadruped-sim/build/unitree_legged_msgs/cmake_install.cmake")
+  include("/home/li/ljyws/quadruped-sim/build/go1_app/cmake_install.cmake")
   include("/home/li/ljyws/quadruped-sim/build/unitree_legged_control/cmake_install.cmake")
   include("/home/li/ljyws/quadruped-sim/build/go1_gazebo/cmake_install.cmake")
 

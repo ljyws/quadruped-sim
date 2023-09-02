@@ -7,6 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH="/home/li/ljyws/quadruped-sim/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/li/ljyws/quadruped-sim/build'
-export PYTHONPATH="/home/li/ljyws/quadruped-sim/devel/lib/python2.7/dist-packages:$PYTHONPATH"

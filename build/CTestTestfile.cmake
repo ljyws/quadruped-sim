@@ -7,5 +7,6 @@
 subdirs("gtest")
 subdirs("robot/go1_description")
 subdirs("unitree_legged_msgs")
+subdirs("go1_app")
 subdirs("unitree_legged_control")
 subdirs("go1_gazebo")

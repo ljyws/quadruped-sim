@@ -38,6 +38,20 @@ add_library(go1_ctrl_lib
             # src/common/Controllers/GaitScheduler.h
             # src/common/Controllers/GaitScheduler.cpp
             # src/common/Math/Interpolation.h
+            src/common/cppTypes.h
+            src/common/Types.h
+            src/common/cTypes.h
+            src/common/Utilities/utilities.h
+            src/common/Utilities/Utilities_print.h
+            src/common/Utilities/Utilities_print.cpp
+            src/common/Utilities/Timer.h
+            src/common/Utilities/PeriodicTask.h
+            src/common/Utilities/PeriodicTask.cpp
+            src/robot/SimulationBridge.h
+            src/robot/SimulationBridge.cpp
+            src/common/ControlParameters/RobotParameters.h
+            src/common/ControlParameters/ControlParameters.h
+            src/common/ControlParameters/ControlParameters.cpp
             src/user/unitree_Controller.h
             src/user/unitree_Controller.cpp
             src/robot/main_app.h

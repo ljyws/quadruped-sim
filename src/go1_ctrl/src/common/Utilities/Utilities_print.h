@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include "cppTypes.h"
+#include "../cppTypes.h"
 
 /*!
  * Floating point value to string.

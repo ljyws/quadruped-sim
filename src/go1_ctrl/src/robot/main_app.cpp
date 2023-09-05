@@ -14,12 +14,12 @@ int main_app(int argc, char **argv, RobotController *ctrl)
 
     gMasterConfig.load_from_file = false; // 不从外部文件导入配置
 
-    printf("[----- Quadruped -----]\n");
+    printf("[-------------------- Quadruped --------------------]\n");
     printf("Robot:   %s\n", gMasterConfig._robot == RobotType::GO1 ? "Go1" : "A1");
     printf("RunMode: %s\n", gMasterConfig.simulated ? "Simulation": "Quadruped");
     if (gMasterConfig.simulated) // 仿真环境下
     {
         SimulationBridge simulationBridge(gMasterConfig._robot, ctrl);
-        // simulationBridge.run();
+        simulationBridge.run();
     }
 }

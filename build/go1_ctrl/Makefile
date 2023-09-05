@@ -197,6 +197,114 @@ go1_ctrl_lib/fast:
 	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build
 .PHONY : go1_ctrl_lib/fast
 
+src/common/ControlParameters/ControlParameters.o: src/common/ControlParameters/ControlParameters.cpp.o
+
+.PHONY : src/common/ControlParameters/ControlParameters.o
+
+# target to build an object file
+src/common/ControlParameters/ControlParameters.cpp.o:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/ControlParameters/ControlParameters.cpp.o
+.PHONY : src/common/ControlParameters/ControlParameters.cpp.o
+
+src/common/ControlParameters/ControlParameters.i: src/common/ControlParameters/ControlParameters.cpp.i
+
+.PHONY : src/common/ControlParameters/ControlParameters.i
+
+# target to preprocess a source file
+src/common/ControlParameters/ControlParameters.cpp.i:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/ControlParameters/ControlParameters.cpp.i
+.PHONY : src/common/ControlParameters/ControlParameters.cpp.i
+
+src/common/ControlParameters/ControlParameters.s: src/common/ControlParameters/ControlParameters.cpp.s
+
+.PHONY : src/common/ControlParameters/ControlParameters.s
+
+# target to generate assembly for a file
+src/common/ControlParameters/ControlParameters.cpp.s:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/ControlParameters/ControlParameters.cpp.s
+.PHONY : src/common/ControlParameters/ControlParameters.cpp.s
+
+src/common/Utilities/PeriodicTask.o: src/common/Utilities/PeriodicTask.cpp.o
+
+.PHONY : src/common/Utilities/PeriodicTask.o
+
+# target to build an object file
+src/common/Utilities/PeriodicTask.cpp.o:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/PeriodicTask.cpp.o
+.PHONY : src/common/Utilities/PeriodicTask.cpp.o
+
+src/common/Utilities/PeriodicTask.i: src/common/Utilities/PeriodicTask.cpp.i
+
+.PHONY : src/common/Utilities/PeriodicTask.i
+
+# target to preprocess a source file
+src/common/Utilities/PeriodicTask.cpp.i:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/PeriodicTask.cpp.i
+.PHONY : src/common/Utilities/PeriodicTask.cpp.i
+
+src/common/Utilities/PeriodicTask.s: src/common/Utilities/PeriodicTask.cpp.s
+
+.PHONY : src/common/Utilities/PeriodicTask.s
+
+# target to generate assembly for a file
+src/common/Utilities/PeriodicTask.cpp.s:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/PeriodicTask.cpp.s
+.PHONY : src/common/Utilities/PeriodicTask.cpp.s
+
+src/common/Utilities/Utilities_print.o: src/common/Utilities/Utilities_print.cpp.o
+
+.PHONY : src/common/Utilities/Utilities_print.o
+
+# target to build an object file
+src/common/Utilities/Utilities_print.cpp.o:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/Utilities_print.cpp.o
+.PHONY : src/common/Utilities/Utilities_print.cpp.o
+
+src/common/Utilities/Utilities_print.i: src/common/Utilities/Utilities_print.cpp.i
+
+.PHONY : src/common/Utilities/Utilities_print.i
+
+# target to preprocess a source file
+src/common/Utilities/Utilities_print.cpp.i:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/Utilities_print.cpp.i
+.PHONY : src/common/Utilities/Utilities_print.cpp.i
+
+src/common/Utilities/Utilities_print.s: src/common/Utilities/Utilities_print.cpp.s
+
+.PHONY : src/common/Utilities/Utilities_print.s
+
+# target to generate assembly for a file
+src/common/Utilities/Utilities_print.cpp.s:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/Utilities_print.cpp.s
+.PHONY : src/common/Utilities/Utilities_print.cpp.s
+
+src/robot/SimulationBridge.o: src/robot/SimulationBridge.cpp.o
+
+.PHONY : src/robot/SimulationBridge.o
+
+# target to build an object file
+src/robot/SimulationBridge.cpp.o:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/robot/SimulationBridge.cpp.o
+.PHONY : src/robot/SimulationBridge.cpp.o
+
+src/robot/SimulationBridge.i: src/robot/SimulationBridge.cpp.i
+
+.PHONY : src/robot/SimulationBridge.i
+
+# target to preprocess a source file
+src/robot/SimulationBridge.cpp.i:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/robot/SimulationBridge.cpp.i
+.PHONY : src/robot/SimulationBridge.cpp.i
+
+src/robot/SimulationBridge.s: src/robot/SimulationBridge.cpp.s
+
+.PHONY : src/robot/SimulationBridge.s
+
+# target to generate assembly for a file
+src/robot/SimulationBridge.cpp.s:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/src/robot/SimulationBridge.cpp.s
+.PHONY : src/robot/SimulationBridge.cpp.s
+
 src/robot/main_app.o: src/robot/main_app.cpp.o
 
 .PHONY : src/robot/main_app.o
@@ -293,6 +401,18 @@ help:
 	@echo "... go1_ctrl_lib"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/common/ControlParameters/ControlParameters.o"
+	@echo "... src/common/ControlParameters/ControlParameters.i"
+	@echo "... src/common/ControlParameters/ControlParameters.s"
+	@echo "... src/common/Utilities/PeriodicTask.o"
+	@echo "... src/common/Utilities/PeriodicTask.i"
+	@echo "... src/common/Utilities/PeriodicTask.s"
+	@echo "... src/common/Utilities/Utilities_print.o"
+	@echo "... src/common/Utilities/Utilities_print.i"
+	@echo "... src/common/Utilities/Utilities_print.s"
+	@echo "... src/robot/SimulationBridge.o"
+	@echo "... src/robot/SimulationBridge.i"
+	@echo "... src/robot/SimulationBridge.s"
 	@echo "... src/robot/main_app.o"
 	@echo "... src/robot/main_app.i"
 	@echo "... src/robot/main_app.s"

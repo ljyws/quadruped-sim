@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/Utilities_print.cpp.o"
+  "CMakeFiles/go1_ctrl_lib.dir/src/common/Utilities/PeriodicTask.cpp.o"
+  "CMakeFiles/go1_ctrl_lib.dir/src/robot/SimulationBridge.cpp.o"
+  "CMakeFiles/go1_ctrl_lib.dir/src/common/ControlParameters/ControlParameters.cpp.o"
   "CMakeFiles/go1_ctrl_lib.dir/src/user/unitree_Controller.cpp.o"
   "CMakeFiles/go1_ctrl_lib.dir/src/robot/main_app.cpp.o"
   "/home/li/ljyws/quadruped-sim/devel/lib/libgo1_ctrl_lib.pdb"

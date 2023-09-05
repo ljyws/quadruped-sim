@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgo1_ctrl_lib.so -o /home/li/ljyws/quadruped-sim/devel/lib/libgo1_ctrl_lib.so CMakeFiles/go1_ctrl_lib.dir/src/user/unitree_Controller.cpp.o CMakeFiles/go1_ctrl_lib.dir/src/robot/main_app.cpp.o 

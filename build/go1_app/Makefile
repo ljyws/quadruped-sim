@@ -80,6 +80,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,17 +123,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-go1_app/CMakeFiles/go1_ctrl.dir/rule:
-	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f CMakeFiles/Makefile2 go1_app/CMakeFiles/go1_ctrl.dir/rule
-.PHONY : go1_app/CMakeFiles/go1_ctrl.dir/rule
-
-# Convenience name for target.
-go1_ctrl: go1_app/CMakeFiles/go1_ctrl.dir/rule
-
-.PHONY : go1_ctrl
-
-# fast build rule for target.
-go1_ctrl/fast:
-	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/build
-.PHONY : go1_ctrl/fast
-
-# Convenience name for target.
 go1_app/CMakeFiles/go1_lib.dir/rule:
 	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f CMakeFiles/Makefile2 go1_app/CMakeFiles/go1_lib.dir/rule
 .PHONY : go1_app/CMakeFiles/go1_lib.dir/rule
@@ -196,6 +181,21 @@ go1_lib: go1_app/CMakeFiles/go1_lib.dir/rule
 go1_lib/fast:
 	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_lib.dir/build.make go1_app/CMakeFiles/go1_lib.dir/build
 .PHONY : go1_lib/fast
+
+# Convenience name for target.
+go1_app/CMakeFiles/go1_app.dir/rule:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f CMakeFiles/Makefile2 go1_app/CMakeFiles/go1_app.dir/rule
+.PHONY : go1_app/CMakeFiles/go1_app.dir/rule
+
+# Convenience name for target.
+go1_app: go1_app/CMakeFiles/go1_app.dir/rule
+
+.PHONY : go1_app
+
+# fast build rule for target.
+go1_app/fast:
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_app.dir/build.make go1_app/CMakeFiles/go1_app.dir/build
+.PHONY : go1_app/fast
 
 src/RosInterface.o: src/RosInterface.cpp.o
 
@@ -230,7 +230,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/src/main.cpp.o
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_app.dir/build.make go1_app/CMakeFiles/go1_app.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -239,7 +239,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/src/main.cpp.i
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_app.dir/build.make go1_app/CMakeFiles/go1_app.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -248,7 +248,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/src/main.cpp.s
+	cd /home/li/ljyws/quadruped-sim/build && $(MAKE) -f go1_app/CMakeFiles/go1_app.dir/build.make go1_app/CMakeFiles/go1_app.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -259,12 +259,12 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... go1_ctrl"
+	@echo "... go1_lib"
+	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... go1_lib"
-	@echo "... edit_cache"
+	@echo "... go1_app"
 	@echo "... rebuild_cache"
 	@echo "... src/RosInterface.o"
 	@echo "... src/RosInterface.i"

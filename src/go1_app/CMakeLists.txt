@@ -40,8 +40,8 @@ add_library(go1_lib
         
         )
 
-add_executable(go1_ctrl src/main.cpp)
-target_link_libraries(go1_ctrl
+add_executable(go1_app src/main.cpp)
+target_link_libraries(go1_app
         go1_lib
         ${catkin_LIBRARIES}
         OsqpEigen::OsqpEigen

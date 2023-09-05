@@ -130,6 +130,9 @@ CATKIN_SYMLINK_INSTALL:BOOL=OFF
 CATKIN_WHITELIST_PACKAGES:STRING=
 
 //Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+
+//Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
@@ -140,7 +143,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -167,7 +170,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -192,6 +195,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the compiler during release builds with debug info.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Flags used by the linker.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -245,10 +251,19 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
+CMAKE_PROJECT_DESCRIPTION:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
+
+//Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+
+//Path to a program.
+CMAKE_READELF:FILEPATH=/usr/bin/readelf
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -298,6 +313,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
 CPPZMQ_INCLUDE_DIRS:PATH=/usr/include
+
+//The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=CURL_DIR-NOTFOUND
 
 //Path to a file.
 CURL_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
@@ -361,6 +379,9 @@ GTS_LIBRARY_gts:FILEPATH=/usr/lib/x86_64-linux-gnu/libgts.so
 
 //Path to a library.
 GTS_LIBRARY_m:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=GTest_DIR-NOTFOUND
 
 //Path to a library.
 JSONCPP_LIBRARY_jsoncpp:FILEPATH=/usr/lib/x86_64-linux-gnu/libjsoncpp.so
@@ -624,6 +645,9 @@ PYTHON_VERSION:STRING=2
 Project_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build
 
 //Value Computed by CMake
+Project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src
 
 //The directory containing a CMake configuration file for Protobuf.
@@ -782,6 +806,9 @@ geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/gtest/googlemock
 
+//Value Computed by CMake
+gmock_IS_TOP_LEVEL:STATIC=OFF
+
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;-lpthread;
 
@@ -798,16 +825,37 @@ gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
 go1_app_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/go1_app
 
 //Value Computed by CMake
+go1_app_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
 go1_app_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_app
 
 //Value Computed by CMake
+go1_ctrl_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/go1_ctrl
+
+//Value Computed by CMake
+go1_ctrl_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+go1_ctrl_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_ctrl
+
+//Dependencies for target
+go1_ctrl_lib_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
 go1_description_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/robot/go1_description
+
+//Value Computed by CMake
+go1_description_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 go1_description_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/robot/go1_description
 
 //Value Computed by CMake
 go1_gazebo_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/go1_gazebo
+
+//Value Computed by CMake
+go1_gazebo_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 go1_gazebo_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_gazebo
@@ -819,10 +867,16 @@ go1_lib_LIB_DEPENDS:STATIC=
 googletest-distribution_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/gtest
 
 //Value Computed by CMake
+googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
 googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/gtest/googlemock/gtest
+
+//Value Computed by CMake
+gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
 gtest_LIB_DEPENDS:STATIC=general;-lpthread;
@@ -896,6 +950,78 @@ onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
 
 //The directory containing a CMake configuration file for osqp.
 osqp_DIR:PATH=/usr/local/lib/cmake/osqp
+
+//Path to a library.
+pkgcfg_lib_AVCODEC_avcodec:FILEPATH=/usr/lib/x86_64-linux-gnu/libavcodec.so
+
+//Path to a library.
+pkgcfg_lib_AVDEVICE_avdevice:FILEPATH=/usr/lib/x86_64-linux-gnu/libavdevice.so
+
+//Path to a library.
+pkgcfg_lib_AVFORMAT_avformat:FILEPATH=/usr/lib/x86_64-linux-gnu/libavformat.so
+
+//Path to a library.
+pkgcfg_lib_AVUTIL_avutil:FILEPATH=/usr/lib/x86_64-linux-gnu/libavutil.so
+
+//Path to a library.
+pkgcfg_lib_BULLET_BulletCollision:FILEPATH=/usr/lib/x86_64-linux-gnu/libBulletCollision.so
+
+//Path to a library.
+pkgcfg_lib_BULLET_BulletDynamics:FILEPATH=/usr/lib/x86_64-linux-gnu/libBulletDynamics.so
+
+//Path to a library.
+pkgcfg_lib_BULLET_BulletSoftBody:FILEPATH=/usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
+
+//Path to a library.
+pkgcfg_lib_BULLET_LinearMath:FILEPATH=/usr/lib/x86_64-linux-gnu/libLinearMath.so
+
+//Path to a library.
+pkgcfg_lib_GTS_glib-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libglib-2.0.so
+
+//Path to a library.
+pkgcfg_lib_GTS_gmodule-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmodule-2.0.so
+
+//Path to a library.
+pkgcfg_lib_GTS_gthread-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgthread-2.0.so
+
+//Path to a library.
+pkgcfg_lib_GTS_gts:FILEPATH=/usr/lib/x86_64-linux-gnu/libgts.so
+
+//Path to a library.
+pkgcfg_lib_GTS_m:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
+//Path to a library.
+pkgcfg_lib_JSONCPP_jsoncpp:FILEPATH=/usr/lib/x86_64-linux-gnu/libjsoncpp.so
+
+//Path to a library.
+pkgcfg_lib_OGRE_PKGC_OgreMain:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreMain.so
+
+//Path to a library.
+pkgcfg_lib_OGRE_PKGC_pthread:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
+//Path to a library.
+pkgcfg_lib_PC_CURL_curl:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurl.so
+
+//Path to a library.
+pkgcfg_lib_SWSCALE_swscale:FILEPATH=/usr/lib/x86_64-linux-gnu/libswscale.so
+
+//Path to a library.
+pkgcfg_lib_TINYXML2_tinyxml2:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
+
+//Path to a library.
+pkgcfg_lib_UUID_uuid:FILEPATH=/usr/lib/x86_64-linux-gnu/libuuid.so
+
+//Path to a library.
+pkgcfg_lib_YAML_yaml:FILEPATH=/usr/lib/x86_64-linux-gnu/libyaml.so
+
+//Path to a library.
+pkgcfg_lib_ZIP_z:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+//Path to a library.
+pkgcfg_lib_ZIP_zip:FILEPATH=/usr/lib/x86_64-linux-gnu/libzip.so
+
+//Path to a library.
+pkgcfg_lib_ZeroMQ_zmq:FILEPATH=/usr/lib/x86_64-linux-gnu/libzmq.so
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
@@ -984,6 +1110,9 @@ unitree_gazebo_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/go1_gazebo
 //Value Computed by CMake
 unitree_legged_control_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/unitree_legged_control
 
+//Value Computed by CMake
+unitree_legged_control_IS_TOP_LEVEL:STATIC=OFF
+
 //Dependencies for the target
 unitree_legged_control_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;unitree_joint_control_tool;
 
@@ -995,6 +1124,9 @@ unitree_legged_msgs_BINARY_DIR:STATIC=/home/li/ljyws/quadruped-sim/build/unitree
 
 //The directory containing a CMake configuration file for unitree_legged_msgs.
 unitree_legged_msgs_DIR:PATH=/home/li/ljyws/quadruped-sim/devel/share/unitree_legged_msgs/cmake
+
+//Value Computed by CMake
+unitree_legged_msgs_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 unitree_legged_msgs_SOURCE_DIR:STATIC=/home/li/ljyws/quadruped-sim/src/unitree_legged_msgs
@@ -1024,6 +1156,7 @@ AVCODEC_LIBS:INTERNAL=
 AVCODEC_LIBS_L:INTERNAL=
 AVCODEC_LIBS_OTHER:INTERNAL=
 AVCODEC_LIBS_PATHS:INTERNAL=
+AVCODEC_MODULE_NAME:INTERNAL=libavcodec
 AVCODEC_PREFIX:INTERNAL=/usr
 AVCODEC_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVCODEC_STATIC_CFLAGS_I:INTERNAL=
@@ -1057,6 +1190,7 @@ AVDEVICE_LIBS:INTERNAL=
 AVDEVICE_LIBS_L:INTERNAL=
 AVDEVICE_LIBS_OTHER:INTERNAL=
 AVDEVICE_LIBS_PATHS:INTERNAL=
+AVDEVICE_MODULE_NAME:INTERNAL='libavdevice '
 AVDEVICE_PREFIX:INTERNAL=/usr
 AVDEVICE_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVDEVICE_STATIC_CFLAGS_I:INTERNAL=
@@ -1090,6 +1224,7 @@ AVFORMAT_LIBS:INTERNAL=
 AVFORMAT_LIBS_L:INTERNAL=
 AVFORMAT_LIBS_OTHER:INTERNAL=
 AVFORMAT_LIBS_PATHS:INTERNAL=
+AVFORMAT_MODULE_NAME:INTERNAL=libavformat
 AVFORMAT_PREFIX:INTERNAL=/usr
 AVFORMAT_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVFORMAT_STATIC_CFLAGS_I:INTERNAL=
@@ -1123,6 +1258,7 @@ AVUTIL_LIBS:INTERNAL=
 AVUTIL_LIBS_L:INTERNAL=
 AVUTIL_LIBS_OTHER:INTERNAL=
 AVUTIL_LIBS_PATHS:INTERNAL=
+AVUTIL_MODULE_NAME:INTERNAL=libavutil
 AVUTIL_PREFIX:INTERNAL=/usr
 AVUTIL_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVUTIL_STATIC_CFLAGS_I:INTERNAL=
@@ -1227,6 +1363,8 @@ Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/li/ljyws/quadruped-sim/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/li/ljyws/quadruped-sim/build/test_results
+//ADVANCED property for variable: CMAKE_ADDR2LINE
+CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -1277,6 +1415,10 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_DLLTOOL
+CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=/usr/local/bin/ccmake
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -1295,12 +1437,16 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Generator instance identifier.
+CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Have symbol pthread_create
 CMAKE_HAVE_LIBC_CREATE:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
 //Have library pthreads
 CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
 //Have library pthread
@@ -1329,7 +1475,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1338,6 +1484,8 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_READELF
+CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.10
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -1370,6 +1518,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_DIR
+CURL_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_INCLUDE_DIR
 CURL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_LIBRARY
@@ -1382,6 +1532,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_AVDEVICE:INTERNAL=[true][v(56.4.100)]
 FIND_PACKAGE_MESSAGE_DETAILS_AVFORMAT:INTERNAL=[true][v()]
 //Details about finding AVUTIL
 FIND_PACKAGE_MESSAGE_DETAILS_AVUTIL:INTERNAL=[true][v()]
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/include][c ][v1.65.1()]
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][v7.58.0()]
 //Details about finding DL
@@ -1448,6 +1600,7 @@ GTS_LIBS:INTERNAL=
 GTS_LIBS_L:INTERNAL=
 GTS_LIBS_OTHER:INTERNAL=
 GTS_LIBS_PATHS:INTERNAL=
+GTS_MODULE_NAME:INTERNAL=gts
 GTS_PREFIX:INTERNAL=/usr
 GTS_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 GTS_STATIC_CFLAGS_I:INTERNAL=
@@ -1481,6 +1634,7 @@ JSONCPP_LIBS:INTERNAL=
 JSONCPP_LIBS_L:INTERNAL=
 JSONCPP_LIBS_OTHER:INTERNAL=
 JSONCPP_LIBS_PATHS:INTERNAL=
+JSONCPP_MODULE_NAME:INTERNAL=jsoncpp
 JSONCPP_PREFIX:INTERNAL=/usr
 JSONCPP_STATIC_CFLAGS:INTERNAL=-I/usr/include/jsoncpp
 JSONCPP_STATIC_CFLAGS_I:INTERNAL=
@@ -1692,6 +1846,41 @@ OGRE_Volume_LIBRARY_DBG-ADVANCED:INTERNAL=1
 OGRE_Volume_LIBRARY_FWK-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_Volume_LIBRARY_REL
 OGRE_Volume_LIBRARY_REL-ADVANCED:INTERNAL=1
+PC_CURL_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
+PC_CURL_CFLAGS_I:INTERNAL=
+PC_CURL_CFLAGS_OTHER:INTERNAL=
+PC_CURL_FOUND:INTERNAL=1
+PC_CURL_INCLUDEDIR:INTERNAL=/usr/include/x86_64-linux-gnu
+PC_CURL_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
+PC_CURL_LDFLAGS:INTERNAL=-lcurl
+PC_CURL_LDFLAGS_OTHER:INTERNAL=
+PC_CURL_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_CURL_LIBRARIES:INTERNAL=curl
+PC_CURL_LIBRARY_DIRS:INTERNAL=
+PC_CURL_LIBS:INTERNAL=
+PC_CURL_LIBS_L:INTERNAL=
+PC_CURL_LIBS_OTHER:INTERNAL=
+PC_CURL_LIBS_PATHS:INTERNAL=
+PC_CURL_MODULE_NAME:INTERNAL=libcurl
+PC_CURL_PREFIX:INTERNAL=/usr
+PC_CURL_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
+PC_CURL_STATIC_CFLAGS_I:INTERNAL=
+PC_CURL_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_CURL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
+PC_CURL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu/mit-krb5;-lcurl;-lnghttp2;-lidn2;-lrtmp;-lpsl;-lssl;-lcrypto;-lssl;-lcrypto;-Wl,-Bsymbolic-functions;-Wl,-z,relro;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-llber;-lldap;-llber;-lz
+PC_CURL_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-Bsymbolic-functions;-Wl,-z,relro
+PC_CURL_STATIC_LIBDIR:INTERNAL=
+PC_CURL_STATIC_LIBRARIES:INTERNAL=curl;nghttp2;idn2;rtmp;psl;ssl;crypto;ssl;crypto;gssapi_krb5;krb5;k5crypto;com_err;lber;ldap;lber;z
+PC_CURL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu/mit-krb5
+PC_CURL_STATIC_LIBS:INTERNAL=
+PC_CURL_STATIC_LIBS_L:INTERNAL=
+PC_CURL_STATIC_LIBS_OTHER:INTERNAL=
+PC_CURL_STATIC_LIBS_PATHS:INTERNAL=
+PC_CURL_VERSION:INTERNAL=7.58.0
+PC_CURL_libcurl_INCLUDEDIR:INTERNAL=
+PC_CURL_libcurl_LIBDIR:INTERNAL=
+PC_CURL_libcurl_PREFIX:INTERNAL=
+PC_CURL_libcurl_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
@@ -1730,6 +1919,7 @@ SWSCALE_LIBS:INTERNAL=
 SWSCALE_LIBS_L:INTERNAL=
 SWSCALE_LIBS_OTHER:INTERNAL=
 SWSCALE_LIBS_PATHS:INTERNAL=
+SWSCALE_MODULE_NAME:INTERNAL=libswscale
 SWSCALE_PREFIX:INTERNAL=/usr
 SWSCALE_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 SWSCALE_STATIC_CFLAGS_I:INTERNAL=
@@ -1767,6 +1957,7 @@ TINYXML2_LIBS:INTERNAL=
 TINYXML2_LIBS_L:INTERNAL=
 TINYXML2_LIBS_OTHER:INTERNAL=
 TINYXML2_LIBS_PATHS:INTERNAL=
+TINYXML2_MODULE_NAME:INTERNAL=tinyxml2
 TINYXML2_PREFIX:INTERNAL=/usr
 TINYXML2_STATIC_CFLAGS:INTERNAL=
 TINYXML2_STATIC_CFLAGS_I:INTERNAL=
@@ -1800,6 +1991,7 @@ UUID_LIBS:INTERNAL=
 UUID_LIBS_L:INTERNAL=
 UUID_LIBS_OTHER:INTERNAL=
 UUID_LIBS_PATHS:INTERNAL=
+UUID_MODULE_NAME:INTERNAL=uuid
 UUID_PREFIX:INTERNAL=/usr
 UUID_STATIC_CFLAGS:INTERNAL=-I/usr/include/uuid
 UUID_STATIC_CFLAGS_I:INTERNAL=
@@ -1833,6 +2025,7 @@ YAML_LIBS:INTERNAL=
 YAML_LIBS_L:INTERNAL=
 YAML_LIBS_OTHER:INTERNAL=
 YAML_LIBS_PATHS:INTERNAL=
+YAML_MODULE_NAME:INTERNAL=yaml-0.1
 YAML_PREFIX:INTERNAL=/usr
 YAML_STATIC_CFLAGS:INTERNAL=
 YAML_STATIC_CFLAGS_I:INTERNAL=
@@ -1866,6 +2059,7 @@ ZIP_LIBS:INTERNAL=
 ZIP_LIBS_L:INTERNAL=
 ZIP_LIBS_OTHER:INTERNAL=
 ZIP_LIBS_PATHS:INTERNAL=
+ZIP_MODULE_NAME:INTERNAL=libzip
 ZIP_PREFIX:INTERNAL=/usr
 ZIP_STATIC_CFLAGS:INTERNAL=-I/usr/lib/x86_64-linux-gnu/libzip/include
 ZIP_STATIC_CFLAGS_I:INTERNAL=
@@ -1899,6 +2093,7 @@ ZeroMQ_LIBS:INTERNAL=
 ZeroMQ_LIBS_L:INTERNAL=
 ZeroMQ_LIBS_OTHER:INTERNAL=
 ZeroMQ_LIBS_PATHS:INTERNAL=
+ZeroMQ_MODULE_NAME:INTERNAL='libzmq '
 ZeroMQ_PREFIX:INTERNAL=/usr
 ZeroMQ_STATIC_CFLAGS:INTERNAL=
 ZeroMQ_STATIC_CFLAGS_I:INTERNAL=
@@ -1938,6 +2133,7 @@ __pkg_config_arguments_BULLET:INTERNAL=bullet>=2.82
 __pkg_config_arguments_GTS:INTERNAL=gts
 __pkg_config_arguments_JSONCPP:INTERNAL=jsoncpp
 __pkg_config_arguments_OGRE_PKGC:INTERNAL=OGRE
+__pkg_config_arguments_PC_CURL:INTERNAL=QUIET;libcurl
 __pkg_config_arguments_SWSCALE:INTERNAL=libswscale
 __pkg_config_arguments_TINYXML2:INTERNAL=tinyxml2
 __pkg_config_arguments_UUID:INTERNAL=uuid
@@ -1952,11 +2148,60 @@ __pkg_config_checked_BULLET:INTERNAL=1
 __pkg_config_checked_GTS:INTERNAL=1
 __pkg_config_checked_JSONCPP:INTERNAL=1
 __pkg_config_checked_OGRE_PKGC:INTERNAL=1
+__pkg_config_checked_PC_CURL:INTERNAL=1
 __pkg_config_checked_SWSCALE:INTERNAL=1
 __pkg_config_checked_TINYXML2:INTERNAL=1
 __pkg_config_checked_UUID:INTERNAL=1
 __pkg_config_checked_YAML:INTERNAL=1
 __pkg_config_checked_ZIP:INTERNAL=1
 __pkg_config_checked_ZeroMQ:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_AVCODEC_avcodec
+pkgcfg_lib_AVCODEC_avcodec-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_AVDEVICE_avdevice
+pkgcfg_lib_AVDEVICE_avdevice-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_AVFORMAT_avformat
+pkgcfg_lib_AVFORMAT_avformat-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_AVUTIL_avutil
+pkgcfg_lib_AVUTIL_avutil-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_BULLET_BulletCollision
+pkgcfg_lib_BULLET_BulletCollision-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_BULLET_BulletDynamics
+pkgcfg_lib_BULLET_BulletDynamics-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_BULLET_BulletSoftBody
+pkgcfg_lib_BULLET_BulletSoftBody-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_BULLET_LinearMath
+pkgcfg_lib_BULLET_LinearMath-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GTS_glib-2.0
+pkgcfg_lib_GTS_glib-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GTS_gmodule-2.0
+pkgcfg_lib_GTS_gmodule-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GTS_gthread-2.0
+pkgcfg_lib_GTS_gthread-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GTS_gts
+pkgcfg_lib_GTS_gts-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GTS_m
+pkgcfg_lib_GTS_m-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_JSONCPP_jsoncpp
+pkgcfg_lib_JSONCPP_jsoncpp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OGRE_PKGC_OgreMain
+pkgcfg_lib_OGRE_PKGC_OgreMain-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_OGRE_PKGC_pthread
+pkgcfg_lib_OGRE_PKGC_pthread-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_CURL_curl
+pkgcfg_lib_PC_CURL_curl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SWSCALE_swscale
+pkgcfg_lib_SWSCALE_swscale-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_TINYXML2_tinyxml2
+pkgcfg_lib_TINYXML2_tinyxml2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_UUID_uuid
+pkgcfg_lib_UUID_uuid-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_YAML_yaml
+pkgcfg_lib_YAML_yaml-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_ZIP_z
+pkgcfg_lib_ZIP_z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_ZIP_zip
+pkgcfg_lib_ZIP_zip-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_ZeroMQ_zmq
+pkgcfg_lib_ZeroMQ_zmq-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

@@ -7,7 +7,7 @@
 #define GRF_UPDATE_FREQUENCY 2.5 // ms
 #define MAIN_UPDATE_FREQUENCY 2.5 // ms
 #define HARDWARE_FEEDBACK_FREQUENCY 2.0  // ms
-
+#define CONTROLLER_DT   0.001
 // constant define
 // joy stick command interprate
 #define JOY_CMD_BODY_HEIGHT_MAX 0.32     // m

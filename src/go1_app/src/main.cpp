@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
     ros::Duration(3).sleep();
 
-    ros::spinOnce();
+    ros::spinOnce(); //初始化需要监听当前关节状态，调用一次
 
     go1->robot_init_stand();
     // go1->log_all_q();

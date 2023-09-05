@@ -103,8 +103,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -1169,19 +1169,6 @@ unitree_legged_msgs_generate_messages_eus/fast:
 .PHONY : unitree_legged_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named go1_ctrl
-
-# Build rule for target.
-go1_ctrl: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 go1_ctrl
-.PHONY : go1_ctrl
-
-# fast build rule for target.
-go1_ctrl/fast:
-	$(MAKE) -f go1_app/CMakeFiles/go1_ctrl.dir/build.make go1_app/CMakeFiles/go1_ctrl.dir/build
-.PHONY : go1_ctrl/fast
-
-#=============================================================================
 # Target rules for targets named go1_lib
 
 # Build rule for target.
@@ -1193,6 +1180,45 @@ go1_lib: cmake_check_build_system
 go1_lib/fast:
 	$(MAKE) -f go1_app/CMakeFiles/go1_lib.dir/build.make go1_app/CMakeFiles/go1_lib.dir/build
 .PHONY : go1_lib/fast
+
+#=============================================================================
+# Target rules for targets named go1_app
+
+# Build rule for target.
+go1_app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go1_app
+.PHONY : go1_app
+
+# fast build rule for target.
+go1_app/fast:
+	$(MAKE) -f go1_app/CMakeFiles/go1_app.dir/build.make go1_app/CMakeFiles/go1_app.dir/build
+.PHONY : go1_app/fast
+
+#=============================================================================
+# Target rules for targets named go1_ctrl
+
+# Build rule for target.
+go1_ctrl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go1_ctrl
+.PHONY : go1_ctrl
+
+# fast build rule for target.
+go1_ctrl/fast:
+	$(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl.dir/build
+.PHONY : go1_ctrl/fast
+
+#=============================================================================
+# Target rules for targets named go1_ctrl_lib
+
+# Build rule for target.
+go1_ctrl_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go1_ctrl_lib
+.PHONY : go1_ctrl_lib
+
+# fast build rule for target.
+go1_ctrl_lib/fast:
+	$(MAKE) -f go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build.make go1_ctrl/CMakeFiles/go1_ctrl_lib.dir/build
+.PHONY : go1_ctrl_lib/fast
 
 #=============================================================================
 # Target rules for targets named unitree_legged_control
@@ -1674,8 +1700,10 @@ help:
 	@echo "... _unitree_legged_msgs_generate_messages_check_deps_BmsState"
 	@echo "... unitree_legged_msgs_gencpp"
 	@echo "... unitree_legged_msgs_generate_messages_eus"
-	@echo "... go1_ctrl"
 	@echo "... go1_lib"
+	@echo "... go1_app"
+	@echo "... go1_ctrl"
+	@echo "... go1_ctrl_lib"
 	@echo "... unitree_legged_control"
 	@echo "... unitreeFootContactPlugin"
 	@echo "... trajectory_msgs_generate_messages_nodejs"

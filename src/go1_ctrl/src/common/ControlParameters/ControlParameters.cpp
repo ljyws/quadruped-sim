@@ -8,7 +8,8 @@
 
 #include "ControlParameters.h"
 #include "../Utilities/utilities.h"
-
+#include "ParamHandler.hpp"
+#include "INIReader.h"
 
 #define YAML_COLLECTION_NAME_KEY "__collection-name__"
 

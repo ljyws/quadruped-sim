@@ -1,0 +1,3 @@
+/home/li/ljyws/quadruped-sim/src/go1_ctrl/src/third-party/inih/build/CMakeFiles/rebuild_cache.dir
+/home/li/ljyws/quadruped-sim/src/go1_ctrl/src/third-party/inih/build/CMakeFiles/inih.dir
+/home/li/ljyws/quadruped-sim/src/go1_ctrl/src/third-party/inih/build/CMakeFiles/edit_cache.dir

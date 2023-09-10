@@ -11,6 +11,14 @@ void SimulationBridge::run()
     // runRobotControl();
 }
 
+
+void SimulationBridge::handleControlParameters()
+{
+    
+}
+
+
+
 void SimulationBridge::runRobotControl()
 {
     if (_firstControllerRun)
@@ -20,7 +28,8 @@ void SimulationBridge::runRobotControl()
         {
             printf("\tAll %ld control parameters are initialized\n",_robotParameters.collection._map.size());
         }
-        // auto *userControlParameters = _robotRunner->_robot_ctrl->getUserControlParameters();
+        auto *userControlParameters = _robotRunner->_robot_ctrl->getUserControlParameters();
+    
         // if(userControlParameters)
         // {
 
